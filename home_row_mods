@@ -1,0 +1,71 @@
+{
+  "title": "Home Row Mods Optimized (Fast Typing, No Double Press)",
+  "rules": [
+    {
+      "description": "Home row keys act as modifiers when held, optimized for fast typing, no double letters",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "a", "modifiers": { "optional": ["any"] } },
+          "to_if_alone": [{ "key_code": "a" }],
+          "to_if_held_down": [{ "key_code": "left_shift", "repeat": false }],
+          "to_delayed_action": { "to_if_canceled": [{ "key_code": "a" }] }
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "s", "modifiers": { "optional": ["any"] } },
+          "to_if_alone": [{ "key_code": "s" }],
+          "to_if_held_down": [{ "key_code": "left_option", "repeat": false }],
+          "to_delayed_action": { "to_if_canceled": [{ "key_code": "s" }] }
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "d", "modifiers": { "optional": ["any"] } },
+          "to_if_alone": [{ "key_code": "d" }],
+          "to_if_held_down": [{ "key_code": "left_control", "repeat": false }],
+          "to_delayed_action": { "to_if_canceled": [{ "key_code": "d" }] }
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f", "modifiers": { "optional": ["any"] } },
+          "to_if_alone": [{ "key_code": "f" }],
+          "to_if_held_down": [{ "key_code": "left_command", "repeat": false }],
+          "to_delayed_action": { "to_if_canceled": [{ "key_code": "f" }] }
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "j", "modifiers": { "optional": ["any"] } },
+          "to_if_alone": [{ "key_code": "j" }],
+          "to_if_held_down": [{ "key_code": "right_command", "repeat": false }],
+          "to_delayed_action": { "to_if_canceled": [{ "key_code": "j" }] }
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "k", "modifiers": { "optional": ["any"] } },
+          "to_if_alone": [{ "key_code": "k" }],
+          "to_if_held_down": [{ "key_code": "right_control", "repeat": false }],
+          "to_delayed_action": { "to_if_canceled": [{ "key_code": "k" }] }
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "l", "modifiers": { "optional": ["any"] } },
+          "to_if_alone": [{ "key_code": "l" }],
+          "to_if_held_down": [{ "key_code": "right_option", "repeat": false }],
+          "to_delayed_action": { "to_if_canceled": [{ "key_code": "l" }] }
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "semicolon", "modifiers": { "optional": ["any"] } },
+          "to_if_alone": [{ "key_code": "semicolon" }],
+          "to_if_held_down": [{ "key_code": "right_shift", "repeat": false }],
+          "to_delayed_action": { "to_if_canceled": [{ "key_code": "semicolon" }] }
+        }
+      ],
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 130,
+        "basic.to_if_held_down_threshold_milliseconds": 60,
+        "basic.simultaneous_threshold_milliseconds": 50
+      }
+    }
+  ]
+}
